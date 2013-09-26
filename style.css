@@ -1,0 +1,52 @@
+body {
+	width: 960px;
+}
+
+.alert {
+	position: absolute;
+    margin: -10px 0 0 -8px;
+    height: 100px;
+    width: 100%;
+    background-color: #008800;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    display:none;
+}
+
+.main {
+	width: 500px;
+	float: left;
+	background-color: red;
+}
+
+.sidebar {
+	width: 150px;
+	float: left;
+	height: 450px;
+	background-color: yellow;
+}
+
+.wuerfeltisch {
+	background-color: green;
+	width: 350px;
+	height: 450px;
+	margin: 0 auto;
+	position: absolute;
+
+}
+
+.augen1, .augen2, .augen3, .augen4, .augen5 {
+	background-color: #FA6900;
+	width: 30px;
+	height: 30px;
+	margin: 10px 10px;
+	position: relative;
+	float: left;
+}
+
+p.augen1, p.augen2, p.augen3, p.augen4, p.augen5 {
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	vertical-align: middle;
+}
