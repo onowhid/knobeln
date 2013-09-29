@@ -32,31 +32,33 @@ $(document).ready(function() {
 	// Funktion für das Vergleichen des Wurfergebnisses
 	var compare = function(dice1, dice2, dice3, dice4, dice5) {
 
+		
+
 		if (dice1 === dice2 && dice2 === dice3 && dice3 === dice4 && dice4 === dice5) {
-			$('h3').html("<p>" + "Kniffel!" + "</p>");
+			$('h3').html("Kniffel!");
 		}
 
 		else if ((dice1 === dice2 && dice2 === dice3 && dice3 === dice4) || (dice2 === dice3 && dice3 === dice4 && dice4 === dice5)) {
-			$('h3').html("<p>" + "Ein Viererpasch!" + "</p>");
+			$('h3').html("Ein Viererpasch!");
 		}
 
 		else if (((dice1 === dice2 && dice2 === dice3) && (dice4 === dice5)) || ((dice1 === dice2) && (dice3 === dice4 && dice4 === dice5))) {
-			$('h3').html("<p>" + "Full House!" + "</p>");
+			$('h3').html("Full House!");
 		}
 
 		else if((dice1 === dice2) && (dice2 === dice3) || (dice2 === dice3) && (dice3 === dice4) || (dice3 === dice4) && (dice4 === dice5)) {
-			$('h3').html("<p>" + "Ein 3er Pasch." + "</p>");
+			$('h3').html("Ein 3er Pasch.");
 		}
 	
 		else if ( (dice5 === dice4+1 && dice4 === dice3+1 && dice3 === dice2+1 && dice2 === dice1+1) ){
-			$('h3').html("<p>" + "Eine grosse Strasse!" + "</p>");
-		}
+		$('h3').html("Eine grosse Strasse!");
+	}
 
 		else if ( (dice4 === dice3+1 && dice3 === dice2+1 && dice2 === dice1+1) || (dice5 === dice4+1 && dice4 === dice3 + 1 && dice3 === dice2+1) || (dice5 === dice4+1 && dice4 === dice2 + 1 && dice2 === dice1+1) || (dice5 === dice3+1 && dice3 === dice2 + 1 && dice2 === dice1+1) || (dice5 === dice4+1 && dice4 === dice2 + 1 && dice2 === dice1+1) || (dice5 === dice3+1 && dice3 === dice2 + 1 && dice2 === dice1+1) ){
-			$('h3').html("<p>" + "Eine kleine Strasse!" + "</p>");
-		}
+		$('h3').html("Eine kleine Strasse!");
+	}
 		else {
-			$('h3').html("<p>" + "Leider nichts." + "</p>");
+			$('h3').html("Leider nichts.");
 		}
 	}
 
@@ -75,7 +77,13 @@ $(document).ready(function() {
 				results.push(d4Result);
 				results.push(d5Result);
 				results.sort();
-			compare(results[0], results[1], results[2], results[3], results[4]);
+				compare(parseInt(results[0]), parseInt(results[1]), parseInt(results[2]), parseInt(results[3]), parseInt(results[4]));
+				$('#roll').html("Nochmal");
+				$('#roll').click(function() {
+					location.reload();
+				});
+				$('#points').css('display', 'none');
+				$('h2').html("Klicke auf nochmal");
 			
 			
 		});
@@ -347,24 +355,25 @@ $(document).ready(function() {
 
 			// Wenn dreimal gewürfelt wurde, wird das Ergebnis angezeigt
 			if (rollCount === 3) {
-				$('h2').html("Du hast dreimal geworfen");
+				$('h2').html("Du hast dreimal geworfen. Klicke auf nochmal.");
 				var d1Result = $('#die1').text();
 				var d2Result = $('#die2').text();
 				var d3Result = $('#die3').text();
 				var d4Result = $('#die4').text();
 				var d5Result = $('#die5').text();
 				var results = [];
-				results.push(d1Result);
-				results.push(d2Result);
-				results.push(d3Result);
-				results.push(d4Result);
-				results.push(d5Result);
+				results.push(parseInt(d1Result));
+				results.push(parseInt(d2Result));
+				results.push(parseInt(d3Result));
+				results.push(parseInt(d4Result));
+				results.push(parseInt(d5Result));
 				results.sort();
 				compare(results[0], results[1], results[2], results[3], results[4]);
 				$('#roll').html("Nochmal");
 				$('#roll').click(function() {
 					location.reload();
 				});
+				$('#points').css('display', 'none');
 			}	
 			else {
 				$('h3').html(unescape("Nochmal? Oder willst du die Punkte nehmen?"));
