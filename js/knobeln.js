@@ -311,6 +311,36 @@ $(document).ready(function() {
 				
 			}
 
+			else if ($('#die1').hasClass('select')) {
+				$('#die1').html(Math.floor(Math.random() * 6 + 1));
+				rollCount = rollCount + 1;
+				
+			}
+
+			else if ($('#die2').hasClass('select')) {
+				$('#die2').html(Math.floor(Math.random() * 6 + 1));
+				rollCount = rollCount + 1;
+				
+			}
+
+			else if ($('#die3').hasClass('select')) {
+				$('#die3').html(Math.floor(Math.random() * 6 + 1));
+				rollCount = rollCount + 1;
+				
+			}
+
+			else if ($('#die4').hasClass('select')) {
+				$('#die4').html(Math.floor(Math.random() * 6 + 1));
+				rollCount = rollCount + 1;
+				
+			}
+
+			else if ($('#die5').hasClass('select')) {
+				$('#die5').html(Math.floor(Math.random() * 6 + 1));
+				rollCount = rollCount + 1;
+				
+			}
+
 			else {
 				$('h2').html(unescape("Du hast vergessen einen W\u00fcrfel zu markieren."));
 			};
