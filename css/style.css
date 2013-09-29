@@ -35,18 +35,32 @@ body {
 
 }
 
-.augen1, .augen2, .augen3, .augen4, .augen5 {
-	background-color: #FA6900;
-	width: 30px;
-	height: 30px;
-	margin: 10px 10px;
-	position: relative;
+.augen {
+	width: 32px;
+	height: 32px;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	background-color: #f5f5f5;
+	border: #999 1px solid;
+	font-size: 24px;
 	float: left;
 }
 
-p.augen1, p.augen2, p.augen3, p.augen4, p.augen5 {
-	text-align: center;
-	height: 35px;
-	line-height: 35px;
-	vertical-align: middle;
+h2 {
+	clear: left;
 }
+
+ button {
+ 	width: 76px;
+ 	height: 36px;
+ 	padding: 10px;
+ 	margin: 5px;
+ 	text-align: center;
+ 	background-color: #F5F5F5;
+ 	border: #999 1px solid;
+ 	font-size: 14px;
+ 	
+ }
+
+

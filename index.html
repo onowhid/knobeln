@@ -2,98 +2,31 @@
 <html>
 <head>
 <title>W&uuml;rfeln!</title>
-<link type="text/css" rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 <script type="text/javascript" src="js/knobeln.js"></script>
+
+
+
 </head>
 <body>
-	<div class="alert">
-		<h2>Bitte beachten:</h2>
-		<p>Dieses Spiel funktioniert nur mit einem modernen Browser, wie z.B. Chrome oder Firefox.</p>
-	</div>
-
-
 	<div class="header">
-		<h1>Willkommem beim Knobeln!</h1>
-		<h4>by <a href="http://labs.sewede.de">sewede.labs</a></h4>
+		<h1>Willkommen beim Knobeln</h1>
+		<p>by <a href="labs.sewede.de">sewede.labs</a></p>
 	</div>
 
+	<div id="die1" class="augen unselect"></div>
+	<div id="die2" class="augen unselect"></div>
+	<div id="die3" class="augen unselect"></div>
+	<div id="die4" class="augen unselect"></div>
+	<div id="die5" class="augen unselect"></div>
+	<button id="roll">W&uuml;rfeln</button>
+	<button id="points">Nehmen</button>
 	
-
-	<div class="main">
-
-		<p>Hier werden die W&uuml;rfel in einem Array angezeigt:
-			<div class="wuerfeltisch">
-				<p class="augen1"><script>document.write(wurfArray[0]);</script></p>
-				<p class="augen2"><script>document.write(wurfArray[1]);</script></p>
-				<p class="augen3"><script>document.write(wurfArray[2]);</script></p>
-				<p class="augen4"><script>document.write(wurfArray[3]);</script></p>
-				<p class="augen5"><script>document.write(wurfArray[4]);</script></p>
-
-			
-
-					<script>
-
-					// wurfAnzeige();
-					
-
-					var userChoice = prompt(unescape("Welche W\u00fcrfel soll nochmal geworfen werden?", "1, 2, 3, 4 oder 5"));
-					nochEinWurfArray(userChoice);
-
-					document.write("<p>" + "Dein Augenbild sieht nun so aus:" + " " + "</p>");</script>
-
-				<p class="augen1"><script>document.write(wurfArray[0]);</script></p>
-				<p class="augen2"><script>document.write(wurfArray[1]);</script></p>
-				<p class="augen3"><script>document.write(wurfArray[2]);</script></p>
-				<p class="augen4"><script>document.write(wurfArray[3]);</script></p>
-				<p class="augen5"><script>document.write(wurfArray[4]);</script></p>
-
-					<script>
-					var userChoice = prompt(unescape("Welche W\u00fcrfel soll nochmal geworfen werden?", "1, 2, 3, 4 oder 5"));
-					nochEinWurfArray(userChoice);
-
-					document.write("<p>" + "Dein Augenbild sieht nun so aus:" + " " + "</p>");</script>
-
-				<p class="augen1"><script>document.write(wurfArray[0]);</script></p>
-				<p class="augen2"><script>document.write(wurfArray[1]);</script></p>
-				<p class="augen3"><script>document.write(wurfArray[2]);</script></p>
-				<p class="augen4"><script>document.write(wurfArray[3]);</script></p>
-				<p class="augen5"><script>document.write(wurfArray[4]);</script></p>
-
-					<script>
-					wurfArray.sort();
-
-					compareArray(wurfArray[0], wurfArray[1], wurfArray[2], wurfArray[3], wurfArray[4]);
-					</script>
-		</p>
-		
-		<!--<script>
-			document.write(unescape("Dein erster Wurf:" + "<br>" + wurf.wuerfel1 + " " + wurf.wuerfel2 + " " + wurf.wuerfel3 + " " + wurf.wuerfel4 + " " + wurf.wuerfel5));
-
-			compare(wurf.wuerfel1, wurf.wuerfel2, wurf.wuerfel3, wurf.wuerfel4, wurf.wuerfel5);
-
-			var userChoice = prompt(unescape("Welcher W\u00fcrfel soll nochmal geworfen werden?"));
-
-			nochEinWurf(userChoice);
-
-			compare(wurf.wuerfel1, wurf.wuerfel2, wurf.wuerfel3, wurf.wuerfel4, wurf.wuerfel5);
-
-			var userChoice = prompt(unescape("Welcher W\u00fcrfel soll nochmal geworfen werden?"));
-
-			nochEinWurf(userChoice);
-
-			compare(wurf.wuerfel1, wurf.wuerfel2, wurf.wuerfel3, wurf.wuerfel4, wurf.wuerfel5);
-			document.write("<br>" + "Deine Punkte:" + " " + punkte);
-
-		</script>-->
-
-		
-		</div>
-		
-	</div>
-	<div class="sidebar">
-		<p><a href="javascript:location.reload(true)"><br>Noch einmal</a></p>
-	</div>
+	<h2 id="showPoints"></h2>
+	<h3></h3>
+	
+	
 </body>
 
 </html>
